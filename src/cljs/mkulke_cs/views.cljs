@@ -11,20 +11,18 @@
        [:strong {:style {:color @color}} @name]])))
 
 (defn name-input []
-  (let [value (reagent/atom "default")]
-    [:input {
-             :type "text"
+  (let [value (reagent/atom "default")
+        dispatch #(re-frame/dispatch [:set-name @value])]
+    [:input {:type "text"
              :on-change #(reset! value (-> % .-target .-value))
-             :on-key-down #(if (= (.-which %) 13) ((fn [x] (re-frame/dispatch [:set-name @value]))))
-             }]))
+             :on-key-down #(if (= (.-which %) 13) (dispatch))}]))
 
 (defn color-tiles []
-  (let [
-        tile (fn [c] [:div.tile {
-                                 :style {:background-color c}
-                                 :on-click #(re-frame/dispatch [:set-color c])}])
+  (let [dispatch (fn [c] #(re-frame/dispatch [:set-color c]))
+        tile (fn [c] [:div.tile {:style {:background-color c}
+                                 :on-click (dispatch c)}])
         tiles (map #(-> % second tile) db/colors)]
-  [:div.tile-wrapper tiles]))
+    [:div.tile-wrapper tiles]))
 
 (defn main-panel []
   [:div

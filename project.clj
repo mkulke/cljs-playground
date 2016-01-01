@@ -9,11 +9,14 @@
   :source-paths ["src/clj"]
 
   :plugins [[lein-cljsbuild "1.1.1"]
-            [lein-figwheel "0.5.0-2"]]
+            [lein-figwheel "0.5.0-2"]
+            [lein-cljfmt "0.3.0"]]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
   :figwheel {:css-dirs ["resources/public/css"]}
+
+  :cljfmt {:file-pattern #"\.cljs$"}
 
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
