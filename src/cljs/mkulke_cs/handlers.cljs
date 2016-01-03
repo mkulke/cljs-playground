@@ -13,8 +13,8 @@
 (defn mgns
   [i]
   (go (let [response (<! (cljs-http.client/get (str endpoint "/" i)))]
-    (print (:status response))
-    (print (-> response :body :name)))))
+        (print (:status response))
+        (print (-> response :body :name)))))
 
 (re-frame/register-handler
  :initialize-db
