@@ -8,4 +8,5 @@
 
 (def default-db
   {:name "francis"
-   :color (colors :red)})
+   :color (colors :red)
+   :fetching? false})

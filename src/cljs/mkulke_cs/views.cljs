@@ -37,10 +37,11 @@
            :min "1"
            :on-change #(reset! value (-> % .-target .-value))
            :value @value
-           :max "5"}])
+           :max "11"}])
 
 (defn id-comp []
   (let [value (reagent/atom "1")
+        fetching? (re-frame/subscribe [:fetching?])
         dispatch #(re-frame/dispatch [:fetch-user @value])]
     (fn []
       [:div
@@ -49,6 +50,7 @@
        [:span " "]
        [:input {:type "button"
                 :value "Fetch"
+                :disabled @fetching?
                 :on-click dispatch}]])))
 
 (defn main-panel []
