@@ -1,10 +1,10 @@
-(ns cljs.playground.core
+(ns cljs-playground.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
-            [cljs.playground.handlers]
-            [cljs.playground.subs]
-            [cljs.playground.views :as views]
-            [cljs.playground.config :as config]))
+            [cljs-playground.handlers]
+            [cljs-playground.subs]
+            [cljs-playground.views :as views]
+            [cljs-playground.config :as config]))
 
 (when config/debug?
   (println "dev mode"))

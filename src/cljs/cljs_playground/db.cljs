@@ -1,4 +1,4 @@
-(ns cljs.playground.db)
+(ns cljs-playground.db)
 
 (defonce colors
   {:magenta "#859900"

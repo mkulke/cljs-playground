@@ -1,7 +1,7 @@
-(ns cljs.playground.views
+(ns cljs-playground.views
   (:require [re-frame.core :as re-frame]
             [reagent.core :as reagent]
-            [cljs.playground.db :as db]))
+            [cljs-playground.db :as db]))
 
 (defn name-display []
   (let [name (re-frame/subscribe [:name])

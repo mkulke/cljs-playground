@@ -1,4 +1,4 @@
-(ns cljs.playground.config)
+(ns cljs-playground.config)
 
 (def debug?
   ^boolean js/goog.DEBUG)

@@ -1,4 +1,4 @@
-(ns cljs.playground.subs
+(ns cljs-playground.subs
   (:require-macros [reagent.ratom :refer [reaction]])
   (:require [re-frame.core :as re-frame]))
 
