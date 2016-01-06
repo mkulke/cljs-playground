@@ -2,7 +2,9 @@
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
             [cljs-playground.handlers]
+            [page-1.handlers]
             [cljs-playground.subs]
+            [page-1.subs]
             [cljs-playground.views :as views]
             [cljs-playground.config :as config]))
 

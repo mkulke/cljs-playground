@@ -1,13 +1,9 @@
-(ns cljs-playground.db)
-
-(defonce colors
-  {:magenta "#859900"
-   :blue "#268bd2"
-   :violet "#6c71c4"
-   :red "#dc322f"})
+(ns cljs-playground.db
+  (:require [page-1.db :as page-1]))
 
 (def default-db
   {:name "francis"
-   :color (colors :red)
+   :color (page-1/colors :red)
    :fetching? false
+   :page-1 page-1/default-db
    :current-page :page-1})
