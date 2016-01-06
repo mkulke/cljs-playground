@@ -5,7 +5,6 @@
             [page-2.views :as page-2]
             [cljs-playground.db :as db]))
 
-
 (defn header []
   (let [current-page (re-frame/subscribe [:current-page])
         dispatch #(re-frame/dispatch [:set-current-page %])]
@@ -19,8 +18,8 @@
 (defn main-panel []
   (let [current-page (re-frame/subscribe [:current-page])]
     [:div
-      [header]
-      [:div.page
-        (condp = @current-page
-          :page-1 [page-1/main-panel]
-          :page-2 [page-2/main-panel])]]))
+     [header]
+     [:div.page
+      (condp = @current-page
+        :page-1 [page-1/main-panel]
+        :page-2 [page-2/main-panel])]]))
