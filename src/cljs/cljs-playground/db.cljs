@@ -1,4 +1,4 @@
-(ns mkulke-cs.db)
+(ns cljs.playground.db)
 
 (defonce colors
   {:magenta "#859900"

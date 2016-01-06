@@ -1,10 +1,10 @@
-(ns mkulke-cs.core
+(ns cljs.playground.core
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
-            [mkulke-cs.handlers]
-            [mkulke-cs.subs]
-            [mkulke-cs.views :as views]
-            [mkulke-cs.config :as config]))
+            [cljs.playground.handlers]
+            [cljs.playground.subs]
+            [cljs.playground.views :as views]
+            [cljs.playground.config :as config]))
 
 (when config/debug?
   (println "dev mode"))

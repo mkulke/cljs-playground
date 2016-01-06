@@ -1,4 +1,4 @@
-(ns mkulke-cs.config)
+(ns cljs.playground.config)
 
 (def debug?
   ^boolean js/goog.DEBUG)

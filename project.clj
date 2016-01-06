@@ -1,4 +1,4 @@
-(defproject mkulke-cs "0.1.0-SNAPSHOT"
+(defproject cljs-playground "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.170"]
                  [org.clojure/core.async "0.2.374"]
@@ -22,8 +22,8 @@
 
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
-                        :figwheel {:on-jsload "mkulke-cs.core/mount-root"}
-                        :compiler {:main mkulke-cs.core
+                        :figwheel {:on-jsload "cljs-playground.core/mount-root"}
+                        :compiler {:main cljs-playground.core
                                    :output-to "resources/public/js/compiled/app.js"
                                    :output-dir "resources/public/js/compiled/out"
                                    :asset-path "js/compiled/out"
@@ -31,7 +31,7 @@
 
                        {:id "min"
                         :source-paths ["src/cljs"]
-                        :compiler {:main mkulke-cs.core
+                        :compiler {:main cljs-playground.core
                                    :output-to "resources/public/js/compiled/app.js"
                                    :optimizations :advanced
                                    :closure-defines {goog.DEBUG false}

@@ -1,10 +1,10 @@
-(ns mkulke-cs.handlers
+(ns cljs.playground.handlers
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [re-frame.core :as re-frame]
             [cljs.core.async :as async :refer [<!]]
             [cljs-http.client :as http]
             [clojure.string :as string]
-            [mkulke-cs.db :as db]))
+            [cljs.playground.db :as db]))
 
 (def endpoint "http://jsonplaceholder.typicode.com/users")
 
