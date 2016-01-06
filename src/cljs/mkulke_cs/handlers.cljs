@@ -41,6 +41,12 @@
    (assoc db :fetching? false)))
 
 (re-frame/register-handler
+ :set-current-page
+ (fn
+   [db [_ value]]
+   (assoc db :current-page value)))
+
+(re-frame/register-handler
  :fetch-user
  (fn
    [db [_ value]]

@@ -2,7 +2,11 @@ body {
   background-color: #fdf6e3;
   font-family: sans-serif;
   color: #586e75;
-  padding: 0 10px;
+  margin: 0;
+}
+
+.page {
+  margin: 5px;
 }
 
 input {
@@ -15,6 +19,28 @@ input {
 
 input[type=button] {
   cursor: pointer;
+}
+
+.header {
+  background-color: #93a1a1;
+  height: 28px;
+}
+
+.header .item {
+  color: #073642;
+  margin: 0;
+  padding: 5px;
+  float: left;
+  cursor: pointer;
+}
+
+.header .item.active {
+  background-color: #586e75;
+  color: #eee8d5;
+}
+
+.page {
+  clear: both;
 }
 
 .text {
@@ -46,31 +72,3 @@ input[type=button] {
   top: 25px;
   left: 25px;
 }
-
-/* .magenta { */
-/*   background-color: #d33682; */
-/* } */
-
-/* .red { */
-/*   background-color: #dc322f; */
-/*   left: 25px; */
-/* } */
-
-/* .blue { */
-/*   background-color: #268bd2; */
-/*   top: 25px; */
-/* } */
-
-/* .violet { */
-/*   background-color: #6c71c4; */
-/*   top: 25px; */
-/*   left: 25px; */
-/* } */
-
-/* .orange { */
-/*   background-color: #cb4b16; */
-/* } */
-
-/* .orange { */
-/*   background-color: #cb4b16; */
-/* } */

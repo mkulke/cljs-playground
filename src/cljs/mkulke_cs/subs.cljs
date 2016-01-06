@@ -13,6 +13,11 @@
    (reaction (:fetching? @db))))
 
 (re-frame/register-sub
+ :current-page
+ (fn [db]
+   (reaction (:current-page @db))))
+
+(re-frame/register-sub
  :color
  (fn [db]
    (reaction (:color @db))))

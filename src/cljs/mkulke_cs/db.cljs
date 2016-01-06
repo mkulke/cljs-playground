@@ -9,4 +9,5 @@
 (def default-db
   {:name "francis"
    :color (colors :red)
-   :fetching? false})
+   :fetching? false
+   :current-page :page-1})

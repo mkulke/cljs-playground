@@ -53,9 +53,21 @@
                 :disabled @fetching?
                 :on-click dispatch}]])))
 
+(defn header []
+  (let [current-page (re-frame/subscribe [:current-page])
+        dispatch #(re-frame/dispatch [:set-current-page %])]
+   (fn []
+      [:div.header
+       [:div {:class (str "item" (if (= @current-page :page-1) " active"))
+              :on-click (partial dispatch :page-1)} "Page 1"]
+       [:div {:class (str "item" (if (= @current-page :page-2) " active"))
+              :on-click (partial dispatch :page-2)} "Page 2"]])))
+
 (defn main-panel []
   [:div
-   [name-display]
-   [color-tiles]
-   [name-comp]
-   [id-comp]])
+   [header]
+   [:div.page
+    [name-display]
+    [color-tiles]
+    [name-comp]
+    [id-comp]]])
