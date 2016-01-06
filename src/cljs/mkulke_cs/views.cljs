@@ -56,7 +56,7 @@
 (defn header []
   (let [current-page (re-frame/subscribe [:current-page])
         dispatch #(re-frame/dispatch [:set-current-page %])]
-   (fn []
+    (fn []
       [:div.header
        [:div {:class (str "item" (if (= @current-page :page-1) " active"))
               :on-click (partial dispatch :page-1)} "Page 1"]
